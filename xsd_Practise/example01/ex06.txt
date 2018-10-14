@@ -1,0 +1,78 @@
+<!-- Add XML Schema (XSD) Data -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="CollegeInfo">
+  	<xs:complexType>
+    	<xs:sequence>
+  			<xs:element name="StudentList" />   
+          	<xs:element name="TeacherList" />   
+         </xs:sequence>	
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="StudentList">
+    <xs:complexType>	
+      <xs:sequence>
+          <xs:element name="Student" minOccurs="1" maxOccurs="unbounded"/>           	
+      </xs:sequence>
+    </xs:complexType>  
+  </xs:element>
+  
+  <xs:complexType name="Student">
+   	<xs:sequence>
+  		<xs:element name="firstName" type="xs:string" />
+      	<xs:element name="lastName" type="xs:string" />
+       	<xs:element name="age" type="xs:string" />       	
+   	</xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="TeacherList">
+    <xs:complexType>	
+      <xs:sequence>
+          <xs:element name="Teacher" minOccurs="1" maxOccurs="unbounded"/>           	
+      </xs:sequence>
+    </xs:complexType>  
+  </xs:element>
+  
+  <xs:complexType name="Teacher">
+   	<xs:sequence>
+  		<xs:element name="firstName" type="xs:string" />
+      	<xs:element name="lastName" type="xs:string" />
+       	<xs:element name="branch" type="xs:string" />       	
+   	</xs:sequence>
+  </xs:complexType>
+</xs:schema> 
+
+
+<!-- Add XML Data -->
+<CollegeInfo>
+  <StudentList>
+    <Student>
+        <firstName>Rahul</firstName>  	
+        <lastName>Shivsharan</lastName>
+        <age>45</age>  
+    </Student> 
+    <Student>
+        <firstName>Aslam</firstName>  	
+        <lastName>Shaikh</lastName>
+        <age>35</age>  
+    </Student>
+    <Student>
+        <firstName>Shahid</firstName>  	
+        <lastName>Qureshi</lastName>
+        <age>31</age>  
+    </Student>
+  </StudentList>
+  <TeacherList>
+    <Teacher>
+        <firstName>Sunil</firstName>  	
+        <lastName>Joshi</lastName>
+        <branch>Science</branch>  
+    </Teacher>
+    <Teacher>
+        <firstName>Vitthal</firstName>  	
+        <lastName>Gaikwad</lastName>
+        <branch>Commerce</branch>  
+    </Teacher>
+  </TeacherList>  
+</CollegeInfo>
