@@ -1,0 +1,19 @@
+ <!-- Add XML Schema (XSD) Data -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Student">
+  	<xs:complexType>
+    	<xs:sequence>
+      		<xs:element name="name" type="xs:string" />
+          	<xs:element name="age" type="xs:string" />
+          	<xs:element name="location" type="xs:string" />
+      	</xs:sequence>
+    </xs:complexType>
+  </xs:element>      
+</xs:schema> 
+
+<!-- Add XML Data -->
+<Student>
+	<name>Rahul</name>
+  	<age>45</age>
+  	<location>Mumbai</location>
+</Student>
