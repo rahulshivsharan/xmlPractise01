@@ -1,0 +1,8 @@
+<!-- Add XML Schema (XSD) Data -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Student" type="xs:string" />      
+</xs:schema>
+
+
+<!-- Add XML Data -->
+<Student>Rahul</Student> 
